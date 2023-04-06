@@ -36,10 +36,6 @@ public class BirthDateTime {
                 break;
         }
 
-
-
-
-
         hour = SafeInput.getRangedInt(in, "What is the hour: ", 1, 24);
 
         minutes = SafeInput.getRangedInt(in, "What is the minute now: ", 1, 60);
