@@ -44,7 +44,6 @@ public class BirthDateTime {
 
         minutes = SafeInput.getRangedInt(in, "What is the minute now: ", 1, 60);
 
-
         System.out.print("Your birthday is " + yearBirth + monthBirth + dayOfBirth);
         System.out.print("The time is " + hour + minutes);
     }
