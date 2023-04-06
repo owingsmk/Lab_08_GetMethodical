@@ -11,20 +11,7 @@ public class BirthDateTime {
         int minutes = 0;
         Scanner in = new Scanner(System.in);
 
-        yearBirth = SafeInput.getRangedInt(in, "Please enter birth year using 4 digit: ");
-
-        int count = 4;
-        while (count !=0){
-            if ((yearBirth < 1950) || (yearBirth > 2023)){
-                System.out.println("Value is out of range");
-                System.out.println("Please try again");
-                break;
-            }
-            else{
-                this.Number = yearBirth;
-                count = 0;
-            }
-        }
+        yearBirth = SafeInput.getRangedInt(in, "Please enter birth year using 4 digit: ", 1950, 2023);
 
         monthBirth = SafeInput.getRangedInt(in, "Enter your birth month using 1-12: ");
 
@@ -53,32 +40,10 @@ public class BirthDateTime {
 
 
 
-        hour = SafeInput.getRangedInt(in, "What is the hour: ");
-        int count = 2;
-        while (count !=0){
-            if ((hour < 1) || (hour > 24)){
-                System.out.println("Value is out of range");
-                System.out.println("Please try again");
-                break;
-            }
-            else{
-                this.Number = hour;
-                count = 0;
-            }
-        }
-        minutes = SafeInput.getRangedInt(in, "What is the minute now: ");
-        int count = 2;
-        while (count !=0){
-            if ((minutes < 1) || (minutes > 60)){
-                System.out.println("Value is out of range");
-                System.out.println("Please try again");
-                break;
-            }
-            else{
-                this.Number = minutes;
-                count = 0;
-            }
-        }
+        hour = SafeInput.getRangedInt(in, "What is the hour: ", 1, 24);
+
+        minutes = SafeInput.getRangedInt(in, "What is the minute now: ", 1, 60);
+
 
         System.out.print("Your birthday is " + yearBirth + monthBirth + dayOfBirth);
         System.out.print("The time is " + hour + minutes);
