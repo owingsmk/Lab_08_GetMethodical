@@ -58,7 +58,7 @@ public class SafeInput {
         boolean hasGoodInput = false;
         int input = 0;
         do {
-            System.out.print("%s between %d and %d: ", prompt, low, high);
+            //System.out.print("%s between %d and %d: ", prompt, low, high);
             if(pipe.hasNextInt()) {
                 input = pipe.nextInt();
                 if(input >= low && input <= high) {
