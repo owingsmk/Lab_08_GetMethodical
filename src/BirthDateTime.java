@@ -13,26 +13,26 @@ public class BirthDateTime {
 
         yearBirth = SafeInput.getRangedInt(in, "Please enter birth year using 4 digit: ", 1950, 2023);
 
-        monthBirth = SafeInput.getRangedInt(in, "Enter your birth month using 1-12: ");
+        monthBirth = SafeInput.getRangedInt(in, "Enter your birth month using 1-12: ", 1, 12);
 
         switch(monthBirth){
             case 9:
             case 4:
             case 6:
             case 11:
-                dayOfBirth = SafeInput.getRangedInt(in, "Enter the date of your birth using 1-30: ");
+                dayOfBirth = SafeInput.getRangedInt(in, "Enter the date of your birth using 1-30: ", 1, 30);
                 break;
             case 2:
                 if (((yearBirth % 4 ==0) && !(yearBirth % 100 == 0)) || (yearBirth % 400 == 0)){
 
-                    dayOfBirth = SafeInput.getRangedInt(in, "Enter the date of your birth using 1-29: ");
+                    dayOfBirth = SafeInput.getRangedInt(in, "Enter the date of your birth using 1-29: ", 1, 29);
                 }
                 else{
-                    dayOfBirth = SafeInput.getRangedInt(in,"Enter the date of your birth using 1-31: ");
+                    dayOfBirth = SafeInput.getRangedInt(in,"Enter the date of your birth using 1-31: ", 1, 31);
                 }
                 break;
             default:
-                dayOfBirth = SafeInput.getRangedInt(in, "Enter the date of your birth using 1-31: ");
+                dayOfBirth = SafeInput.getRangedInt(in, "Enter the date of your birth using 1-31: ", 1, 31);
                 break;
         }
 
